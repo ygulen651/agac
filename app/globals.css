@@ -192,7 +192,7 @@ a[href^="#"] {
   position: absolute;
   width: 4px;
   height: 4px;
-  background: linear-gradient(45deg, #10b981, #34d399);
+  background: #e5e7eb;
   border-radius: 50%;
   opacity: 0.7;
   animation: particleFloat 8s ease-in-out infinite;
@@ -300,7 +300,7 @@ a[href^="#"] {
 }
 
 .crown-1 {
-  background: linear-gradient(135deg, #10b981, #34d399, #6ee7b7);
+  background: linear-gradient(135deg, #6b7280, #9ca3af, #d1d5db);
   box-shadow: 
     inset 0 -20px 30px rgba(16, 185, 129, 0.3),
     0 10px 20px rgba(16, 185, 129, 0.2);
@@ -514,7 +514,7 @@ a[href^="#"] {
 
 .roots-1::before,
 .roots-1::after {
-  background: linear-gradient(45deg, #059669, #10b981);
+  background: #e5e7eb;
 }
 
 .roots-2::before,
@@ -552,7 +552,7 @@ a[href^="#"] {
 .roots-1 .root-small-1,
 .roots-1 .root-small-2,
 .roots-1 .root-small-3 {
-  background: linear-gradient(45deg, #059669, #10b981);
+  background: #e5e7eb;
 }
 
 .roots-2 .root-small-1,
@@ -614,7 +614,7 @@ a[href^="#"] {
   max-width: 420px;
   margin: 0 auto;
   padding: 50px 20px 30px;
-  background: linear-gradient(180deg, #87CEEB 0%, #98FB98 30%, #90EE90 70%, #8FBC8F 100%);
+  background: white;
   border-radius: 25px;
   box-shadow: 
     0 20px 40px rgba(0, 0, 0, 0.15),
@@ -645,7 +645,7 @@ a[href^="#"] {
   position: absolute;
   width: 12px;
   height: 8px;
-  background: linear-gradient(45deg, #228B22, #32CD32);
+  background: #e5e7eb;
   border-radius: 50% 0;
   opacity: 0.6;
   animation: floatingLeaf 8s ease-in-out infinite;
@@ -777,7 +777,7 @@ a[href^="#"] {
   position: absolute;
   width: 8px;
   height: 6px;
-  background: linear-gradient(45deg, #228B22, #32CD32);
+  background: #e5e7eb;
   border-radius: 50% 0;
   animation: individualLeafSway 3s ease-in-out infinite;
 }
@@ -1058,8 +1058,8 @@ a[href^="#"] {
   position: relative;
   width: 100%;
   height: 400px;
-  background: linear-gradient(135deg, #90EE90 0%, #98FB98 30%, #8FBC8F 70%, #228B22 100%);
-  border-radius: 50% 20% 50% 20%;
+  background: white;
+  border-radius: 20px;
   box-shadow: 
     0 15px 35px rgba(34, 139, 34, 0.3),
     inset 0 2px 10px rgba(255, 255, 255, 0.2),
@@ -1080,21 +1080,11 @@ a[href^="#"] {
 }
 
 .main-vein {
-  position: absolute;
-  top: 10%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 3px;
-  height: 80%;
-  background: linear-gradient(180deg, rgba(34, 139, 34, 0.8) 0%, rgba(0, 100, 0, 0.6) 100%);
-  border-radius: 2px;
+  display: none;
 }
 
 .side-vein {
-  position: absolute;
-  background: linear-gradient(90deg, rgba(34, 139, 34, 0.6) 0%, transparent 100%);
-  height: 1px;
-  border-radius: 1px;
+  display: none;
 }
 
 .vein-1 {
@@ -1203,20 +1193,20 @@ a[href^="#"] {
 /* Leaf Text */
 .leaf-text {
   text-align: center;
-  color: white;
+  color: #059669;
 }
 
 .leaf-title {
   font-size: 1.8rem;
   font-weight: bold;
   margin-bottom: 15px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  color: #059669;
 }
 
 .leaf-description {
   font-size: 1rem;
   line-height: 1.6;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+  color: #1a1a1a;
 }
 
 /* Leaf Edge Details */
@@ -1335,15 +1325,15 @@ a[href^="#"] {
 
 /* Leaf Card Color Variations */
 .leaf-card-1 .leaf-container {
-  background: linear-gradient(135deg, #90EE90 0%, #98FB98 30%, #8FBC8F 70%, #228B22 100%);
+  background: white;
 }
 
 .leaf-card-2 .leaf-container {
-  background: linear-gradient(135deg, #87CEEB 0%, #98FB98 30%, #90EE90 70%, #20B2AA 100%);
+  background: white;
 }
 
 .leaf-card-3 .leaf-container {
-  background: linear-gradient(135deg, #DDA0DD 0%, #98FB98 30%, #90EE90 70%, #9370DB 100%);
+  background: white;
 }
 
 /* Why Leaf Cards - Enhanced Styles */
@@ -1366,8 +1356,8 @@ a[href^="#"] {
   position: relative;
   width: 100%;
   height: 450px;
-  background: linear-gradient(135deg, #90EE90 0%, #98FB98 30%, #8FBC8F 70%, #228B22 100%);
-  border-radius: 60% 30% 60% 30%;
+  background: white;
+  border-radius: 20px;
   box-shadow: 
     0 20px 50px rgba(34, 139, 34, 0.4),
     inset 0 3px 15px rgba(255, 255, 255, 0.3),
@@ -1388,23 +1378,11 @@ a[href^="#"] {
 }
 
 .why-main-vein {
-  position: absolute;
-  top: 8%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 4px;
-  height: 85%;
-  background: linear-gradient(180deg, rgba(34, 139, 34, 0.9) 0%, rgba(0, 100, 0, 0.7) 100%);
-  border-radius: 2px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  display: none;
 }
 
 .why-side-vein {
-  position: absolute;
-  background: linear-gradient(90deg, rgba(34, 139, 34, 0.7) 0%, transparent 100%);
-  height: 2px;
-  border-radius: 1px;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  display: none;
 }
 
 .why-vein-1 {
@@ -1497,20 +1475,20 @@ a[href^="#"] {
 /* Why Leaf Text */
 .why-leaf-text {
   text-align: center;
-  color: white;
+  color: #059669;
 }
 
 .why-leaf-title {
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 20px;
-  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
+  color: #059669;
 }
 
 .why-leaf-description {
   font-size: 1.1rem;
   line-height: 1.7;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  color: #1a1a1a;
 }
 
 /* Why Leaf Edge Details */
@@ -1650,15 +1628,15 @@ a[href^="#"] {
 
 /* Why Leaf Card Color Variations */
 .why-leaf-card-1 .why-leaf-container {
-  background: linear-gradient(135deg, #90EE90 0%, #98FB98 30%, #8FBC8F 70%, #228B22 100%);
+  background: white;
 }
 
 .why-leaf-card-2 .why-leaf-container {
-  background: linear-gradient(135deg, #87CEEB 0%, #98FB98 30%, #90EE90 70%, #20B2AA 100%);
+  background: white;
 }
 
 .why-leaf-card-3 .why-leaf-container {
-  background: linear-gradient(135deg, #DDA0DD 0%, #98FB98 30%, #90EE90 70%, #9370DB 100%);
+  background: white;
 }
 
 /* Why Perfect Tree Card Styles */
@@ -1668,7 +1646,7 @@ a[href^="#"] {
   max-width: 450px;
   margin: 0 auto;
   padding: 60px 25px 40px;
-  background: linear-gradient(180deg, #87CEEB 0%, #98FB98 30%, #90EE90 70%, #8FBC8F 100%);
+  background: white;
   border-radius: 30px;
   box-shadow: 
     0 25px 50px rgba(0, 0, 0, 0.2),
@@ -1699,7 +1677,7 @@ a[href^="#"] {
   position: absolute;
   width: 15px;
   height: 10px;
-  background: linear-gradient(45deg, #228B22, #32CD32);
+  background: #e5e7eb;
   border-radius: 50% 0;
   opacity: 0.7;
   animation: whyFloatingLeaf 10s ease-in-out infinite;
@@ -1834,7 +1812,7 @@ a[href^="#"] {
   position: absolute;
   width: 10px;
   height: 8px;
-  background: linear-gradient(45deg, #228B22, #32CD32);
+  background: #e5e7eb;
   border-radius: 50% 0;
   animation: whyIndividualLeafSway 4s ease-in-out infinite;
 }
@@ -2097,15 +2075,15 @@ a[href^="#"] {
 
 /* Why Tree Card Color Variations */
 .why-tree-card-1 .why-perfect-tree-card {
-  background: linear-gradient(180deg, #87CEEB 0%, #98FB98 30%, #90EE90 70%, #8FBC8F 100%);
+  background: white;
 }
 
 .why-tree-card-2 .why-perfect-tree-card {
-  background: linear-gradient(180deg, #87CEEB 0%, #98FB98 30%, #90EE90 70%, #8FBC8F 100%);
+  background: white;
 }
 
 .why-tree-card-3 .why-perfect-tree-card {
-  background: linear-gradient(180deg, #87CEEB 0%, #98FB98 30%, #90EE90 70%, #8FBC8F 100%);
+  background: white;
 }
 
 /* Donation Page Styles */
@@ -2209,7 +2187,7 @@ a[href^="#"] {
   appearance: none;
   width: 24px;
   height: 24px;
-  background: linear-gradient(135deg, #10b981, #059669);
+  background: #e5e7eb;
   cursor: pointer;
   border-radius: 50%;
   box-shadow: 0 4px 8px rgba(16, 185, 129, 0.3);
@@ -2224,7 +2202,7 @@ a[href^="#"] {
 .slider::-moz-range-thumb {
   width: 24px;
   height: 24px;
-  background: linear-gradient(135deg, #10b981, #059669);
+  background: #e5e7eb;
   cursor: pointer;
   border-radius: 50%;
   border: none;
@@ -2652,7 +2630,7 @@ a[href^="#"] {
   position: absolute;
   width: 4px;
   height: 4px;
-  background: linear-gradient(45deg, #10b981, #059669);
+  background: linear-gradient(45deg, #6b7280, #4b5563);
   border-radius: 50%;
   opacity: 0;
   animation: donorParticleFloat 3s ease-in-out infinite;
@@ -2791,7 +2769,7 @@ textarea:focus {
 .logo-container:hover {
   transform: scale(1.05);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-  border-color: #10b981;
+  border-color: #6b7280;
 }
 
 .logo-container img {

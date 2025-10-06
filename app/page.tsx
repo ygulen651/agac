@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import { FaFacebookF, FaInstagram } from 'react-icons/fa';
 
 export default function Home() {
   const [selectedSaplings, setSelectedSaplings] = useState(1);
@@ -33,13 +34,13 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-green-50 to-teal-50">
+    <div className="min-h-screen bg-green-50">
       {/* Hero Section */}
-      <section className="relative overflow-hidden min-h-screen flex items-center justify-center">
+      <section className="relative overflow-hidden py-16 flex items-center justify-center pt-40">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-5">
           <div className="absolute top-20 left-20 w-72 h-72 bg-green-500 rounded-full mix-blend-multiply filter blur-xl animate-pulse"></div>
-          <div className="absolute top-40 right-20 w-72 h-72 bg-emerald-500 rounded-full mix-blend-multiply filter blur-xl animate-pulse animation-delay-2000"></div>
+          <div className="absolute top-40 right-20 w-72 h-72 bg-gray-600 rounded-full mix-blend-multiply filter blur-xl animate-pulse animation-delay-2000"></div>
           <div className="absolute -bottom-8 left-40 w-72 h-72 bg-teal-500 rounded-full mix-blend-multiply filter blur-xl animate-pulse animation-delay-4000"></div>
         </div>
 
@@ -67,16 +68,10 @@ export default function Home() {
 
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="mb-8">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-green-100 text-green-800 text-sm font-medium mb-6">
-              <span className="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse"></span>
-              Doğa için harekete geçiyoruz
-            </div>
-          </div>
           
-          <h1 className="text-6xl md:text-8xl font-black text-gray-900 mb-6 leading-tight">
+          <h1 className="text-4xl md:text-6xl font-black text-gray-900 mb-6 leading-tight">
             <span className="block">Daha Yeşil Bir Karaman</span>
-            <span className="block bg-gradient-to-r from-green-600 via-emerald-600 to-teal-600 bg-clip-text text-transparent">
+            <span className="block bg-gradient-to-r from-green-600 via-green-700 to-green-800 bg-clip-text text-transparent">
               Hedefimiz 1 Milyon Fidan
             </span>
           </h1>
@@ -86,15 +81,15 @@ export default function Home() {
             <blockquote className="text-lg md:text-xl text-gray-900 font-semibold italic text-center leading-relaxed">
               "Vatan Toprağı Kutsaldır, Kaderine Terk Edilemez!"
             </blockquote>
-            <cite className="block text-right text-sm text-gray-700 font-medium mt-3">
+            <cite className="block text-right text-lg text-black font-bold mt-3">
               - M. Kemal Atatürk
             </cite>
           </div>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-            <button className="group relative px-8 py-4 bg-gradient-to-r from-green-600 to-emerald-600 text-white font-bold text-lg rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
+            <button className="group relative px-8 py-4 bg-gradient-to-r from-green-600 to-green-700 text-white font-bold text-lg rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
               <span className="relative z-10">Fidan Dik</span>
-              <div className="absolute inset-0 bg-gradient-to-r from-green-700 to-emerald-700 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-gray-700 to-gray-800 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </button>
             
             <a
@@ -106,12 +101,6 @@ export default function Home() {
           </div>
         </div>
         
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <div className="w-6 h-10 border-2 border-gray-400 rounded-full flex justify-center">
-            <div className="w-1 h-3 bg-gray-400 rounded-full mt-2 animate-pulse"></div>
-          </div>
-        </div>
       </section>
 
       {/* Recent Donors Section */}
@@ -121,7 +110,7 @@ export default function Home() {
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
               Son Bağış Yapanlar
             </h2>
-            <p className="text-xl text-gray-600">
+            <p className="text-xl text-green-600">
               Doğaya katkıda bulunan değerli bağışçılarımız
             </p>
             <div className="mt-6 inline-flex items-center px-6 py-3 rounded-full bg-green-100 text-green-800 text-lg font-semibold">
@@ -133,10 +122,10 @@ export default function Home() {
           {recentDonations.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                {recentDonations.map((donation: any) => (
-                <div key={donation.id} className="group donor-card bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border border-green-100">
+                <div key={donation.id} className="group donor-card bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border border-green-200">
                   {/* Donor Avatar */}
                   <div className="flex items-center mb-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
+                    <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
                       {donation.donorName.charAt(0).toUpperCase()}
                     </div>
                     <div>
@@ -150,17 +139,17 @@ export default function Home() {
                   {/* Donation Details */}
                   <div className="space-y-3">
                     <div className="flex justify-between items-center">
-                      <span className="text-sm text-gray-600">Bağış Miktarı</span>
+                      <span className="text-sm text-green-600">Bağış Miktarı</span>
                       <span className="text-lg font-bold text-green-600">{donation.amount} ₺</span>
                     </div>
                     <div className="flex justify-between items-center">
-                      <span className="text-sm text-gray-600">Fidan Sayısı</span>
-                      <span className="text-lg font-bold text-emerald-600">{donation.saplingCount} Fidan</span>
+                      <span className="text-sm text-green-600">Fidan Sayısı</span>
+                      <span className="text-lg font-bold text-green-700">{donation.saplingCount} Fidan</span>
                     </div>
                   </div>
                   
                   {/* Impact Badge */}
-                  <div className="mt-4 pt-4 border-t border-green-200">
+                  <div className="mt-4 pt-4 border-t border-gray-200">
                     <div className="flex items-center justify-center">
                       <div className="flex items-center px-3 py-1 bg-green-100 rounded-full">
                         <span className="text-sm font-medium text-green-800">
@@ -181,12 +170,12 @@ export default function Home() {
             </div>
           ) : (
             <div className="text-center py-12">
-              <div className="w-24 h-24 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                <svg className="w-12 h-12 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="w-24 h-24 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <svg className="w-12 h-12 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold text-gray-600 mb-2">Henüz bağış yok</h3>
+              <h3 className="text-xl font-semibold text-green-600 mb-2">Henüz bağış yok</h3>
               <p className="text-gray-500">İlk bağışçı olmak ister misiniz?</p>
             </div>
           )}
@@ -196,7 +185,7 @@ export default function Home() {
             <div className="text-center mt-12">
               <Link
                 href="/donors"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-600 to-emerald-600 text-white font-bold text-lg rounded-full hover:from-green-700 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-600 to-green-700 text-white font-bold text-lg rounded-full hover:from-green-700 hover:to-green-800 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
               >
                 Tüm Bağışçıları Gör
                 <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -215,42 +204,42 @@ export default function Home() {
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
               Rakamlarla Başarımız
             </h2>
-            <p className="text-xl text-gray-600">
+            <p className="text-xl text-green-600">
               Birlikte neler başardığımızı görün
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center p-8 bg-gradient-to-br from-green-50 to-emerald-50 rounded-3xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-6">
+            <div className="text-center p-8 bg-white rounded-3xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-green-200">
+              <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
                 <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
                 </svg>
               </div>
               <div className="text-5xl font-black text-green-600 mb-2">15,247</div>
-              <div className="text-xl font-semibold text-gray-700 mb-2">Dikilen Fidan</div>
+              <div className="text-xl font-semibold text-green-700 mb-2">Dikilen Fidan</div>
               <div className="text-green-600 font-medium">+2,341 bu ay</div>
             </div>
             
-            <div className="text-center p-8 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-3xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <div className="text-center p-8 bg-white rounded-3xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-green-200">
               <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-6">
                 <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                 </svg>
               </div>
               <div className="text-5xl font-black text-blue-600 mb-2">3,891</div>
-              <div className="text-xl font-semibold text-gray-700 mb-2">Aktif Gönüllü</div>
+              <div className="text-xl font-semibold text-green-700 mb-2">Aktif Gönüllü</div>
               <div className="text-blue-600 font-medium">+456 yeni üye</div>
             </div>
             
-            <div className="text-center p-8 bg-gradient-to-br from-purple-50 to-pink-50 rounded-3xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <div className="text-center p-8 bg-white rounded-3xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-green-200">
               <div className="w-20 h-20 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-6">
                 <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
               <div className="text-5xl font-black text-purple-600 mb-2">127</div>
-              <div className="text-xl font-semibold text-gray-700 mb-2">Hektar Alan</div>
+              <div className="text-xl font-semibold text-green-700 mb-2">Hektar Alan</div>
               <div className="text-purple-600 font-medium">+18 yeni bölge</div>
             </div>
           </div>
@@ -258,13 +247,13 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section className="py-24 bg-gradient-to-br from-gray-50 to-green-50">
+      <section className="py-24 bg-green-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
             <h2 className="text-5xl md:text-6xl font-black text-gray-900 mb-6">
               Neden Ağaç Dikmeliyiz?
             </h2>
-            <p className="text-2xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-2xl text-green-600 max-w-3xl mx-auto">
               Her ağaç, doğaya ve geleceğimize yapılan bir yatırımdır
             </p>
           </div>
@@ -451,13 +440,13 @@ export default function Home() {
       </section>
 
       {/* Three Steps Section */}
-      <section className="py-24 bg-gradient-to-br from-amber-50 via-orange-50 to-yellow-50">
+      <section className="py-24 bg-green-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
             <h2 className="text-5xl md:text-6xl font-black text-gray-900 mb-6">
               Üç Adımda Değişim Yaratın
             </h2>
-            <p className="text-2xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-2xl text-green-600 max-w-3xl mx-auto">
               Doğaya katkıda bulunmak hiç bu kadar kolay olmamıştı
             </p>
           </div>
@@ -644,7 +633,7 @@ export default function Home() {
       </section>
 
       {/* Donation Card Section */}
-      <section id="donation-card" className="py-20 bg-gradient-to-br from-gray-50 to-green-50">
+      <section id="donation-card" className="py-20 bg-green-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="donation-card bg-white rounded-3xl shadow-2xl p-8 md:p-12">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -661,7 +650,7 @@ export default function Home() {
                 </div>
 
                 {/* Selected Amount Display */}
-                <div className="bg-gray-100 rounded-2xl p-6">
+                <div className="bg-green-100 rounded-2xl p-6">
                   <div className="text-sm font-bold text-gray-900 uppercase tracking-wide mb-2">
                     Seçilen Miktar
                   </div>
@@ -731,29 +720,29 @@ export default function Home() {
                 </div>
 
                 {/* IBAN Info */}
-                <div className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-2xl p-6 border-2 border-green-200">
+                <div className="bg-white rounded-2xl p-6 border-2 border-gray-200">
                   <div className="flex items-center mb-4">
                     <div className="text-2xl mr-3">🏦</div>
                     <div>
                       <div className="text-lg font-bold text-gray-900">Banka Bilgileri</div>
-                      <div className="text-sm text-gray-800 font-semibold">Havale için aşağıdaki bilgileri kullanın</div>
+                      <div className="text-sm text-green-800 font-semibold">Havale için aşağıdaki bilgileri kullanın</div>
                     </div>
                   </div>
                   
                   <div className="space-y-3">
-                    <div className="bg-white rounded-lg p-3 border border-green-100">
+                    <div className="bg-white rounded-lg p-3 border border-green-200">
                       <div className="text-xs font-bold text-gray-900 mb-1">Banka</div>
                       <div className="text-sm font-bold text-gray-900">Ziraat Bankası</div>
                     </div>
                     
-                    <div className="bg-white rounded-lg p-3 border border-green-100">
+                    <div className="bg-white rounded-lg p-3 border border-green-200">
                       <div className="text-xs font-bold text-gray-900 mb-1">Hesap Sahibi</div>
                       <div className="text-sm font-bold text-gray-900">Doğa İçin Bir Fidan Derneği</div>
                     </div>
                     
-                    <div className="bg-white rounded-lg p-3 border border-green-100">
+                    <div className="bg-white rounded-lg p-3 border border-green-200">
                       <div className="text-xs font-bold text-gray-900 mb-1">IBAN</div>
-                      <div className="text-sm font-mono font-bold text-gray-900 bg-gray-50 px-2 py-1 rounded">
+                      <div className="text-sm font-mono font-bold text-gray-900 bg-green-50 px-2 py-1 rounded">
                         TR12 0001 0000 1234 5678 9012 34
                       </div>
                     </div>
@@ -771,7 +760,7 @@ export default function Home() {
                 {/* Donate Button */}
                 <button 
                   onClick={() => setShowDonationModal(true)}
-                  className="w-full bg-gradient-to-r from-green-600 to-emerald-600 text-white text-xl font-bold py-6 px-8 rounded-2xl hover:from-green-700 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                  className="w-full bg-gradient-to-r from-green-600 to-green-700 text-white text-xl font-bold py-6 px-8 rounded-2xl hover:from-green-700 hover:to-green-800 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
                 >
                   🏦 IBAN ile Güvenle Bağış Yap
                 </button>
@@ -790,7 +779,7 @@ export default function Home() {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Destekleyenlerimiz
             </h2>
-            <p className="text-lg text-gray-600">
+            <p className="text-lg text-green-600">
               Bize güvenen değerli kurumlarımız
             </p>
           </div>
@@ -930,7 +919,7 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-gradient-to-r from-green-600 via-emerald-600 to-teal-600 relative overflow-hidden">
+      <section className="py-24 bg-gradient-to-r from-green-600 via-green-700 to-green-800 relative overflow-hidden">
         <div className="absolute inset-0 bg-black opacity-10"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="max-w-4xl mx-auto text-white">
@@ -944,7 +933,7 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <a 
                 href="#donation-card"
-                className="group px-12 py-6 bg-white text-green-600 rounded-full text-2xl font-bold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-2xl inline-block"
+                className="group px-12 py-6 bg-white text-green-600 rounded-full text-2xl font-bold hover:bg-green-100 transition-all duration-300 transform hover:scale-105 shadow-2xl inline-block"
               >
                 <span className="flex items-center justify-center">
                   Bağış Yap
@@ -966,7 +955,7 @@ export default function Home() {
         <div className="modal-backdrop fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
           <div className="donation-modal bg-white rounded-3xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
             {/* Modal Header */}
-            <div className="bg-gradient-to-r from-green-600 to-emerald-600 text-white p-6 rounded-t-3xl">
+            <div className="bg-gradient-to-r from-green-600 to-green-700 text-white p-6 rounded-t-3xl">
               <div className="flex items-center justify-between">
                 <div className="flex items-center">
                   <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mr-4">
@@ -997,51 +986,51 @@ export default function Home() {
             {/* Modal Content */}
             <div className="modal-content p-6 space-y-6">
               {/* Donation Summary */}
-              <div className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-2xl p-6 border border-green-200">
+              <div className="bg-white rounded-2xl p-6 border border-green-200">
                 <h4 className="text-xl font-bold text-gray-900 mb-4">Bağış Özeti</h4>
                 <div className="grid grid-cols-2 gap-4">
                   <div>
-                    <div className="text-sm text-gray-600">Bağış Miktarı</div>
+                    <div className="text-sm text-green-600">Bağış Miktarı</div>
                     <div className="text-2xl font-bold text-green-600">
                       {customAmount ? `${customAmount} ₺` : `${selectedSaplings * 10} ₺`}
                     </div>
                   </div>
                   <div>
-                    <div className="text-sm text-gray-600">Dikilecek Fidan</div>
+                    <div className="text-sm text-green-600">Dikilecek Fidan</div>
                     <div className="text-2xl font-bold text-green-600">{selectedSaplings} Fidan</div>
                   </div>
                 </div>
                 {donorName && (
-                  <div className="mt-4 pt-4 border-t border-green-200">
-                    <div className="text-sm text-gray-600">Bağışçı</div>
+                  <div className="mt-4 pt-4 border-t border-gray-200">
+                    <div className="text-sm text-green-600">Bağışçı</div>
                     <div className="text-lg font-semibold text-gray-900">{donorName}</div>
                   </div>
                 )}
               </div>
 
               {/* IBAN Information */}
-              <div className="bg-white rounded-2xl p-6 border-2 border-green-200">
+              <div className="bg-white rounded-2xl p-6 border-2 border-gray-200">
                 <div className="flex items-center mb-4">
                   <div className="text-3xl mr-3">🏦</div>
                   <div>
                     <h4 className="text-xl font-bold text-gray-900">Banka Bilgileri</h4>
-                    <p className="text-gray-600">Havale için aşağıdaki bilgileri kullanın</p>
+                    <p className="text-green-600">Havale için aşağıdaki bilgileri kullanın</p>
                   </div>
                 </div>
                 
                 <div className="space-y-4">
-                  <div className="bg-gray-50 rounded-lg p-4">
-                    <div className="text-sm font-medium text-gray-600 mb-1">Banka</div>
+                  <div className="bg-green-50 rounded-lg p-4">
+                    <div className="text-sm font-medium text-green-600 mb-1">Banka</div>
                     <div className="text-lg font-semibold text-gray-900">Ziraat Bankası</div>
                   </div>
                   
-                  <div className="bg-gray-50 rounded-lg p-4">
-                    <div className="text-sm font-medium text-gray-600 mb-1">Hesap Sahibi</div>
+                  <div className="bg-green-50 rounded-lg p-4">
+                    <div className="text-sm font-medium text-green-600 mb-1">Hesap Sahibi</div>
                     <div className="text-lg font-semibold text-gray-900">Doğa İçin Bir Fidan Derneği</div>
                   </div>
                   
-                  <div className="bg-gray-50 rounded-lg p-4">
-                    <div className="text-sm font-medium text-gray-600 mb-2">IBAN</div>
+                  <div className="bg-green-50 rounded-lg p-4">
+                    <div className="text-sm font-medium text-green-600 mb-2">IBAN</div>
                     <div className="text-lg font-mono font-bold text-gray-900 bg-white px-3 py-2 rounded border">
                       TR12 0001 0000 1234 5678 9012 34
                     </div>
@@ -1054,7 +1043,7 @@ export default function Home() {
                     navigator.clipboard.writeText('TR12 0001 0000 1234 5678 9012 34');
                     alert('IBAN kopyalandı!');
                   }}
-                  className="copy-button w-full mt-6 bg-green-100 text-green-700 py-3 rounded-xl font-semibold hover:bg-green-200 transition-all duration-300 flex items-center justify-center"
+                  className="copy-button w-full mt-6 bg-green-100 text-green-700 py-3 rounded-xl font-semibold hover:bg-gray-200 transition-all duration-300 flex items-center justify-center"
                 >
                   📋 IBAN&apos;ı Kopyala
                 </button>
@@ -1079,7 +1068,7 @@ export default function Home() {
               <div className="flex gap-4">
                 <button
                   onClick={() => setShowDonationModal(false)}
-                  className="flex-1 py-4 px-6 border-2 border-gray-300 text-gray-700 rounded-2xl font-semibold hover:border-gray-400 hover:bg-gray-50 transition-all duration-300"
+                  className="flex-1 py-4 px-6 border-2 border-gray-300 text-green-700 rounded-2xl font-semibold hover:border-gray-400 hover:bg-green-50 transition-all duration-300"
                 >
                   Daha Sonra
                 </button>
@@ -1114,7 +1103,7 @@ export default function Home() {
                       alert('Bağış kaydedilemedi!');
                     }
                   }}
-                  className="flex-1 py-4 px-6 bg-gradient-to-r from-green-600 to-emerald-600 text-white rounded-2xl font-semibold hover:from-green-700 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105"
+                  className="flex-1 py-4 px-6 bg-gradient-to-r from-green-600 to-green-700 text-white rounded-2xl font-semibold hover:from-green-700 hover:to-green-800 transition-all duration-300 transform hover:scale-105"
                 >
                   ✅ Bağış Yap
                 </button>
@@ -1129,7 +1118,7 @@ export default function Home() {
         <div className="modal-backdrop fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
           <div className="thank-you-modal bg-white rounded-3xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
             {/* Modal Header */}
-            <div className="bg-gradient-to-r from-green-500 to-emerald-500 text-white p-6 rounded-t-3xl text-center">
+            <div className="bg-gradient-to-r from-gray-500 to-gray-600 text-white p-6 rounded-t-3xl text-center">
               <div className="flex justify-center mb-4">
                 <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center">
                   <svg className="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -1146,7 +1135,7 @@ export default function Home() {
               {/* Success Animation */}
               <div className="text-center">
                 <div className="success-animation mb-6">
-                  <div className="w-32 h-32 mx-auto bg-gradient-to-br from-green-100 to-emerald-100 rounded-full flex items-center justify-center relative overflow-hidden">
+                  <div className="w-32 h-32 mx-auto bg-gradient-to-br from-green-100 to-green-200 rounded-full flex items-center justify-center relative overflow-hidden">
                     <Image
                       src="/—Pngtree—bodhi green leaf tree_20793600.png"
                       alt="Ağaç"
@@ -1165,23 +1154,23 @@ export default function Home() {
               </div>
 
               {/* Donation Details */}
-              <div className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-2xl p-6 border border-green-200">
+              <div className="bg-white rounded-2xl p-6 border border-green-200">
                 <h4 className="text-xl font-bold text-gray-900 mb-4 text-center">Bağış Detayları</h4>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="text-center">
                     <div className="text-3xl font-bold text-green-600 mb-1">
                       {customAmount ? `${customAmount} ₺` : `${selectedSaplings * 10} ₺`}
                     </div>
-                    <div className="text-sm text-gray-600">Bağış Miktarı</div>
+                    <div className="text-sm text-green-600">Bağış Miktarı</div>
                   </div>
                   <div className="text-center">
                     <div className="text-3xl font-bold text-green-600 mb-1">{selectedSaplings}</div>
-                    <div className="text-sm text-gray-600">Dikilecek Fidan</div>
+                    <div className="text-sm text-green-600">Dikilecek Fidan</div>
                   </div>
                 </div>
                 {donorName && (
-                  <div className="mt-4 pt-4 border-t border-green-200 text-center">
-                    <div className="text-sm text-gray-600">Bağışçı</div>
+                  <div className="mt-4 pt-4 border-t border-gray-200 text-center">
+                    <div className="text-sm text-green-600">Bağışçı</div>
                     <div className="text-lg font-semibold text-gray-900">{donorName}</div>
                   </div>
                 )}
@@ -1228,7 +1217,7 @@ export default function Home() {
                 <div className="text-center">
                   <div className="text-4xl mb-3">🌍</div>
                   <h4 className="text-xl font-bold text-gray-900 mb-2">Etkiniz</h4>
-                  <p className="text-gray-700 leading-relaxed">
+                  <p className="text-green-700 leading-relaxed">
                     Bağışınızla <strong>{selectedSaplings} fidan</strong> dikilecek ve 
                     <strong> {selectedSaplings * 22} kg karbondioksit</strong> emilimi sağlanacak. 
                     Doğaya katkınız için minnettarız!
@@ -1240,7 +1229,7 @@ export default function Home() {
               <div className="flex gap-4">
                 <button
                   onClick={() => setShowThankYouModal(false)}
-                  className="flex-1 py-4 px-6 bg-gradient-to-r from-green-600 to-emerald-600 text-white rounded-2xl font-semibold hover:from-green-700 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105"
+                  className="flex-1 py-4 px-6 bg-gradient-to-r from-green-600 to-green-700 text-white rounded-2xl font-semibold hover:from-green-700 hover:to-green-800 transition-all duration-300 transform hover:scale-105"
                 >
                   🏠 Ana Sayfaya Dön
                 </button>
@@ -1271,15 +1260,22 @@ export default function Home() {
                 daha güzel bir gelecek demek.
               </p>
               <div className="flex gap-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center hover:scale-110 transition-transform cursor-pointer">
-                  <span className="text-lg font-bold">f</span>
-                </div>
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center hover:scale-110 transition-transform cursor-pointer">
-                  <span className="text-lg font-bold">t</span>
-                </div>
-                <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center hover:scale-110 transition-transform cursor-pointer">
-                  <span className="text-lg font-bold">i</span>
-                </div>
+                <a 
+                  href="https://www.facebook.com/profile.php?id=61581790713616" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="w-12 h-12 bg-blue-600 hover:bg-blue-700 rounded-full flex items-center justify-center text-white text-xl transition-all duration-300 hover:scale-110"
+                >
+                  <FaFacebookF />
+                </a>
+                <a 
+                  href="https://www.instagram.com/yesilkaraman_tr?igsh=czA2bWg0NXBwNjEz" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 rounded-full flex items-center justify-center text-white text-xl transition-all duration-300 hover:scale-110"
+                >
+                  <FaInstagram />
+                </a>
               </div>
             </div>
             
@@ -1296,15 +1292,15 @@ export default function Home() {
             <div>
               <h4 className="text-xl font-bold mb-6 text-green-400">İletişim</h4>
               <ul className="space-y-4 text-gray-300 text-lg">
-                <li>info@dogaicinfidan.org</li>
-                <li>+90 (212) 123 45 67</li>
-                <li>İstanbul, Türkiye</li>
+                <li>yesilgelecekinfo@gmail.com</li>
+                <li>0530 783 33 70</li>
+                <li>Karaman, Türkiye</li>
               </ul>
             </div>
           </div>
           
           <div className="border-t border-gray-700 mt-12 pt-8 text-center">
-            <p className="text-gray-400 text-lg">&copy; 2024 Daha Yeşil Bir Karaman. Tüm hakları saklıdır.</p>
+            <p className="text-green-400 text-lg">&copy; 2024 Daha Yeşil Bir Karaman. Tüm hakları saklıdır.</p>
           </div>
         </div>
       </footer>
