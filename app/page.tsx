@@ -65,27 +65,6 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Animated Tree Image - Left Side */}
-        <div className="absolute left-10 top-1/2 transform -translate-y-1/2 hidden lg:block">
-          <div className="tree-image-container tree-left">
-            <Image
-              src="/36471.png"
-              alt="Olgun Ağaç"
-              width={320}
-              height={420}
-              className="tree-image"
-              priority
-            />
-            {/* Floating particles around tree */}
-            <div className="floating-particles">
-              <div className="particle particle-1"></div>
-              <div className="particle particle-2"></div>
-              <div className="particle particle-3"></div>
-              <div className="particle particle-4"></div>
-              <div className="particle particle-5"></div>
-            </div>
-          </div>
-        </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="mb-8">
@@ -96,16 +75,21 @@ export default function Home() {
           </div>
           
           <h1 className="text-6xl md:text-8xl font-black text-gray-900 mb-6 leading-tight">
-            <span className="block">Doğa için</span>
+            <span className="block">Daha Yeşil Bir Karaman</span>
             <span className="block bg-gradient-to-r from-green-600 via-emerald-600 to-teal-600 bg-clip-text text-transparent">
-              Bir Fidan
+              Hedefimiz 1 Milyon Fidan
             </span>
           </h1>
           
-          <p className="text-xl md:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed">
-            Geleceğimiz için ağaç dikelim. Her fidan, daha temiz bir dünya, 
-            daha güzel bir gelecek demek.
-          </p>
+          {/* Atatürk Sözü */}
+          <div className="mb-8 max-w-4xl mx-auto">
+            <blockquote className="text-lg md:text-xl text-gray-900 font-semibold italic text-center leading-relaxed">
+              "Vatan Toprağı Kutsaldır, Kaderine Terk Edilemez!"
+            </blockquote>
+            <cite className="block text-right text-sm text-gray-700 font-medium mt-3">
+              - M. Kemal Atatürk
+            </cite>
+          </div>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
             <button className="group relative px-8 py-4 bg-gradient-to-r from-green-600 to-emerald-600 text-white font-bold text-lg rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
@@ -799,6 +783,152 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Scrolling Logos Section */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Destekleyenlerimiz
+            </h2>
+            <p className="text-lg text-gray-600">
+              Bize güvenen değerli kurumlarımız
+            </p>
+          </div>
+          
+          {/* Scrolling Logo Container */}
+          <div className="relative overflow-hidden">
+            <div className="flex animate-scroll space-x-12">
+              {/* TERMA Logo */}
+              <div className="logo-container flex-shrink-0">
+                <Image
+                  src="/tema-logo.png"
+                  alt="TERMA"
+                  width={120}
+                  height={60}
+                  className="object-contain"
+                />
+              </div>
+              
+              {/* Karaman Gazeteciler Cemiyeti Logo */}
+              <div className="logo-container flex-shrink-0">
+                <Image
+                  src="/KARAMAN LOGO.png"
+                  alt="Karaman Gazeteciler Cemiyeti"
+                  width={120}
+                  height={60}
+                  className="object-contain"
+                />
+              </div>
+              
+              {/* KAREV Logo */}
+              <div className="logo-container flex-shrink-0">
+                <Image
+                  src="/karev.png"
+                  alt="KAREV - Karaman Eğitim Kültür ve Sağlık Vakfı"
+                  width={120}
+                  height={60}
+                  className="object-contain"
+                />
+              </div>
+              
+              {/* İKEV Logo */}
+              <div className="logo-container flex-shrink-0">
+                <Image
+                  src="/İkev logo.png"
+                  alt="İKEV"
+                  width={120}
+                  height={60}
+                  className="object-contain"
+                />
+              </div>
+              
+              {/* KARTAP Logo */}
+              <div className="logo-container flex-shrink-0">
+                <Image
+                  src="/kartap logo.png"
+                  alt="KARTAP - Karaman Tanıtım ve Turizm Derneği"
+                  width={120}
+                  height={60}
+                  className="object-contain"
+                />
+              </div>
+              
+              {/* KARDOF Logo */}
+              <div className="logo-container flex-shrink-0">
+                <Image
+                  src="/KARDOF LOGO YENİ[5752].png"
+                  alt="KARDOF - Karaman Doğa Sporları ve Kulübü"
+                  width={120}
+                  height={60}
+                  className="object-contain"
+                />
+              </div>
+              
+              {/* Duplicate logos for seamless scrolling */}
+              <div className="logo-container flex-shrink-0">
+                <Image
+                  src="/tema-logo.png"
+                  alt="TERMA"
+                  width={120}
+                  height={60}
+                  className="object-contain"
+                />
+              </div>
+              
+              <div className="logo-container flex-shrink-0">
+                <Image
+                  src="/KARAMAN LOGO.png"
+                  alt="Karaman Gazeteciler Cemiyeti"
+                  width={120}
+                  height={60}
+                  className="object-contain"
+                />
+              </div>
+              
+              <div className="logo-container flex-shrink-0">
+                <Image
+                  src="/karev.png"
+                  alt="KAREV - Karaman Eğitim Kültür ve Sağlık Vakfı"
+                  width={120}
+                  height={60}
+                  className="object-contain"
+                />
+              </div>
+              
+              <div className="logo-container flex-shrink-0">
+                <Image
+                  src="/İkev logo.png"
+                  alt="İKEV"
+                  width={120}
+                  height={60}
+                  className="object-contain"
+                />
+              </div>
+              
+              <div className="logo-container flex-shrink-0">
+                <Image
+                  src="/kartap logo.png"
+                  alt="KARTAP - Karaman Tanıtım ve Turizm Derneği"
+                  width={120}
+                  height={60}
+                  className="object-contain"
+                />
+              </div>
+              
+              <div className="logo-container flex-shrink-0">
+                <Image
+                  src="/KARDOF LOGO YENİ[5752].png"
+                  alt="KARDOF - Karaman Doğa Sporları ve Kulübü"
+                  width={120}
+                  height={60}
+                  className="object-contain"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-24 bg-gradient-to-r from-green-600 via-emerald-600 to-teal-600 relative overflow-hidden">
         <div className="absolute inset-0 bg-black opacity-10"></div>
@@ -1135,7 +1265,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
             <div className="col-span-1 md:col-span-2">
-              <h3 className="text-3xl font-black mb-6 text-green-400">Doğa için Bir Fidan</h3>
+              <h3 className="text-3xl font-black mb-6 text-green-400">Daha Yeşil Bir Karaman Hedefimiz 1 Milyon Fidan</h3>
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
                 Geleceğimiz için ağaç dikiyoruz. Her fidan, daha temiz bir dünya, 
                 daha güzel bir gelecek demek.
@@ -1174,7 +1304,7 @@ export default function Home() {
           </div>
           
           <div className="border-t border-gray-700 mt-12 pt-8 text-center">
-            <p className="text-gray-400 text-lg">&copy; 2024 Doğa için Bir Fidan. Tüm hakları saklıdır.</p>
+            <p className="text-gray-400 text-lg">&copy; 2024 Daha Yeşil Bir Karaman. Tüm hakları saklıdır.</p>
           </div>
         </div>
       </footer>

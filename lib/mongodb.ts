@@ -1,6 +1,6 @@
 import { MongoClient, Db } from 'mongodb';
 
-const uri = process.env.MONGODB_URI || 'mongodb+srv://ygulen651_db_user:qbwMZHOJF3b45hML@cluster0.utz0f5r.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
+const uri = process.env.MONGODB_URI || 'mongodb+srv://ygulen651_db_user:qbwMZHOJF3b45hML@cluster0.utz0f5r.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0&ssl=true&authSource=admin';
 const dbName = process.env.MONGODB_DB_NAME || 'agac_donations';
 
 let client: MongoClient;
@@ -20,7 +20,19 @@ export async function connectToDatabase() {
       throw new Error('MONGODB_URI environment variable is not set');
     }
     
-    client = new MongoClient(uri);
+    client = new MongoClient(uri, {
+      serverSelectionTimeoutMS: 5000, // 5 saniye timeout
+      connectTimeoutMS: 10000, // 10 saniye bağlantı timeout
+      socketTimeoutMS: 45000, // 45 saniye socket timeout
+      maxPoolSize: 10, // Maksimum bağlantı havuzu
+      minPoolSize: 1, // Minimum bağlantı havuzu
+      maxIdleTimeMS: 30000, // 30 saniye idle timeout
+      retryWrites: true,
+      retryReads: true,
+      tls: true,
+      tlsAllowInvalidCertificates: false,
+      tlsAllowInvalidHostnames: false
+    });
     await client.connect();
     db = client.db(dbName);
     
