@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { useParams } from 'next/navigation';
+import Link from 'next/link';
 import { Donation } from '@/lib/database';
 import { CertificateGenerator, CertificateData } from '@/lib/certificate-generator';
 import { CleanCertificateGenerator } from '@/lib/clean-certificate-generator';
@@ -64,7 +65,7 @@ export default function CertificatePage() {
       alert('PDF başarıyla paylaşıldı!');
     } catch (error) {
       console.error('PDF paylaşma hatası:', error);
-      alert('PDF paylaşılamadı: ' + error.message);
+      alert('PDF paylaşılamadı: ' + (error instanceof Error ? error.message : 'Bilinmeyen hata'));
     } finally {
       // Button'u eski haline getir
       const button = document.querySelector('button[onClick="handleShare"]') as HTMLButtonElement;
@@ -93,7 +94,7 @@ export default function CertificatePage() {
       alert('PDF başarıyla indirildi!');
     } catch (error) {
       console.error('PDF indirme hatası:', error);
-      alert('PDF indirilemedi: ' + error.message);
+      alert('PDF indirilemedi: ' + (error instanceof Error ? error.message : 'Bilinmeyen hata'));
     } finally {
       // Button'u eski haline getir
       const button = document.querySelector('button[onClick="handleDownload"]') as HTMLButtonElement;
@@ -122,12 +123,12 @@ export default function CertificatePage() {
           <div className="text-6xl mb-4">❌</div>
           <h1 className="text-2xl font-bold text-gray-900 mb-4">Sertifika Bulunamadı</h1>
           <p className="text-gray-600 mb-6">{error || 'Geçersiz sertifika linki'}</p>
-          <a
+          <Link
             href="/"
             className="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-colors inline-block"
           >
             Ana Sayfaya Dön
-          </a>
+          </Link>
         </div>
       </div>
     );
@@ -168,12 +169,12 @@ export default function CertificatePage() {
 
       {/* Geri Dön Butonu */}
       <div className="fixed top-6 left-6 z-50">
-        <a
+        <Link
           href="/"
           className="bg-white/95 backdrop-blur-lg text-gray-700 px-4 py-2 rounded-xl shadow-lg hover:bg-white transition-all duration-300 flex items-center gap-2 font-semibold border border-gray-200 transform hover:scale-105"
         >
           ← Ana Sayfa
-        </a>
+        </Link>
       </div>
 
       {/* Sertifika Bilgileri */}

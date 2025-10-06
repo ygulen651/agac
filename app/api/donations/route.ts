@@ -12,7 +12,7 @@ export async function GET() {
       .limit(20) // Son 20 bağışı göster
       .toArray();
 
-    const publicDonations = donations.map((donation: any) => ({
+           const publicDonations = donations.map((donation: any) => ({
       id: donation._id.toString(),
       donorName: donation.donorName,
       amount: donation.amount,

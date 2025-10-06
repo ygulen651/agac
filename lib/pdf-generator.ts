@@ -76,7 +76,6 @@ export class PDFGenerator {
 
         // PDF boyutları
         const pdfWidth = pdf.internal.pageSize.getWidth();
-        const pdfHeight = pdf.internal.pageSize.getHeight();
         const imgWidth = pdfWidth;
         const imgHeight = (canvas.height * pdfWidth) / canvas.width;
 
@@ -167,7 +166,7 @@ export class PDFGenerator {
         await this.downloadPDF(certificateData);
       } catch (downloadError) {
         console.error('PDF indirme de başarısız:', downloadError);
-        throw new Error('PDF oluşturulamadı: ' + error.message);
+        throw new Error('PDF oluşturulamadı: ' + (error instanceof Error ? error.message : 'Bilinmeyen hata'));
       }
     }
   }

@@ -148,7 +148,7 @@ export default function Home() {
           
           {recentDonations.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-              {recentDonations.map((donation: any, index: number) => (
+               {recentDonations.map((donation: any) => (
                 <div key={donation.id} className="group donor-card bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border border-green-100">
                   {/* Donor Avatar */}
                   <div className="flex items-center mb-4">
@@ -779,7 +779,7 @@ export default function Home() {
                     <div className="text-xs font-bold text-gray-900 mb-1">✅ Basit Süreç</div>
                     <div className="text-xs text-gray-900 font-semibold">
                       Bağışınız onaylandıktan sonra banka bilgilerini kullanarak havale yapabilirsiniz. 
-                      Havale açıklamasında "<strong>Fidan Bağışı</strong>" yazmanız yeterlidir.
+                      Havale açıklamasında &quot;<strong>Fidan Bağışı</strong>&quot; yazmanız yeterlidir.
                     </div>
                   </div>
                 </div>
@@ -926,7 +926,7 @@ export default function Home() {
                   }}
                   className="copy-button w-full mt-6 bg-green-100 text-green-700 py-3 rounded-xl font-semibold hover:bg-green-200 transition-all duration-300 flex items-center justify-center"
                 >
-                  📋 IBAN'ı Kopyala
+                  📋 IBAN&apos;ı Kopyala
                 </button>
               </div>
 
@@ -937,7 +937,7 @@ export default function Home() {
                   <div>
                     <h4 className="text-lg font-bold text-yellow-800 mb-2">Önemli Bilgiler</h4>
                     <div className="text-yellow-700 space-y-2">
-                      <p><strong>Havale Açıklaması:</strong> "{donorName || 'Adınız'} - Fidan Bağışı"</p>
+                      <p><strong>Havale Açıklaması:</strong> &quot;{donorName || 'Adınız'} - Fidan Bağışı&quot;</p>
                       <p><strong>Sertifika:</strong> Havaleyi tamamladıktan sonra sertifikanız e-posta adresinize gönderilecektir.</p>
                       <p><strong>Süre:</strong> İşlem 1-2 iş günü içinde tamamlanır.</p>
                     </div>
@@ -1077,7 +1077,7 @@ export default function Home() {
                           <span className="text-xs font-bold text-blue-800">2</span>
                         </div>
                         <div>
-                          <strong>Açıklama:</strong> "{donorName || 'Adınız'} - Fidan Bağışı"
+                          <strong>Açıklama:</strong> &quot;{donorName || 'Adınız'} - Fidan Bağışı&quot;
                         </div>
                       </div>
                       <div className="flex items-start">
