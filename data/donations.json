@@ -1,0 +1,44 @@
+[
+  {
+    "donorName": "yusuf",
+    "donorEmail": "ygılen651@gamail.com",
+    "amount": 125,
+    "saplingCount": 1,
+    "iban": "TR12 0001 0000 1234 5678 9012 34",
+    "status": "verified",
+    "certificateSent": false,
+    "id": "mgbz8kfc6c9htyz17v",
+    "createdAt": "2025-10-04T07:54:01.704Z",
+    "updatedAt": "2025-10-04T09:02:58.938Z",
+    "verifiedBy": "Sertifika Sistemi",
+    "verificationNotes": "Sertifika gönderildi - FID-20251004-T6DMPG"
+  },
+  {
+    "id": "ifdl0cierdpdioufb03yn",
+    "donorName": "Test Kullanıcı",
+    "donorEmail": "test@example.com",
+    "amount": 100,
+    "saplingCount": 2,
+    "iban": "TR12 0001 0000 1234 5678 9012 34",
+    "status": "verified",
+    "certificateSent": false,
+    "createdAt": "2025-10-06T06:29:46.076Z",
+    "updatedAt": "2025-10-06T06:29:46.076Z",
+    "verifiedBy": "Otomatik Sistem",
+    "verificationNotes": "Bağış otomatik olarak onaylandı"
+  },
+  {
+    "id": "ve2jxigvclblmcpybzufmm",
+    "donorName": "ceyhun",
+    "donorEmail": "yamaura",
+    "amount": 100000,
+    "saplingCount": 1,
+    "iban": "TR12 0001 0000 1234 5678 9012 34",
+    "status": "verified",
+    "certificateSent": false,
+    "createdAt": "2025-10-06T06:31:49.537Z",
+    "updatedAt": "2025-10-06T06:31:49.537Z",
+    "verifiedBy": "Otomatik Sistem",
+    "verificationNotes": "Bağış otomatik olarak onaylandı"
+  }
+]
