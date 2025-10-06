@@ -1,7 +1,7 @@
 import { MongoClient, Db } from 'mongodb';
 
-const uri = 'mongodb+srv://ygulen651_db_user:qbwMZHOJF3b45hML@cluster0.utz0f5r.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
-const dbName = 'agac_donations';
+const uri = process.env.MONGODB_URI || 'mongodb+srv://ygulen651_db_user:qbwMZHOJF3b45hML@cluster0.utz0f5r.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
+const dbName = process.env.MONGODB_DB_NAME || 'agac_donations';
 
 let client: MongoClient;
 let db: Db;
