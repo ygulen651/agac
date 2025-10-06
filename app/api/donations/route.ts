@@ -32,7 +32,8 @@ export async function GET() {
     console.error('Bağış verileri okuma hatası:', error);
     return NextResponse.json({
       success: false,
-      error: 'Bağış verileri okunamadı'
+      error: 'Bağış verileri okunamadı',
+      details: error instanceof Error ? error.message : 'Bilinmeyen hata'
     }, { status: 500 });
   }
 }
@@ -81,7 +82,8 @@ export async function POST(request: NextRequest) {
     console.error('Bağış kaydetme hatası:', error);
     return NextResponse.json({
       success: false,
-      error: 'Bağış kaydedilemedi'
+      error: 'Bağış kaydedilemedi',
+      details: error instanceof Error ? error.message : 'Bilinmeyen hata'
     }, { status: 500 });
   }
 }

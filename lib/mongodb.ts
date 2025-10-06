@@ -12,6 +12,14 @@ export async function connectToDatabase() {
   }
 
   try {
+    console.log('MongoDB bağlantısı başlatılıyor...');
+    console.log('URI:', uri ? 'Mevcut' : 'Eksik');
+    console.log('DB Name:', dbName);
+    
+    if (!uri) {
+      throw new Error('MONGODB_URI environment variable is not set');
+    }
+    
     client = new MongoClient(uri);
     await client.connect();
     db = client.db(dbName);
@@ -20,6 +28,10 @@ export async function connectToDatabase() {
     return { client, db };
   } catch (error) {
     console.error('MongoDB bağlantı hatası:', error);
+    console.error('Error details:', {
+      message: error instanceof Error ? error.message : 'Unknown error',
+      stack: error instanceof Error ? error.stack : undefined
+    });
     throw error;
   }
 }
